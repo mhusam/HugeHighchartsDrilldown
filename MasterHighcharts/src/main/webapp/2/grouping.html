@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+AJAX: http://jsfiddle.net/pypaq94t/9/
+https://gist.github.com/LeCoupa/bbcc8ab7807b9eea1d67
+-->
+
+<html>
+    <head>
+        <title>Highchart 6.0.1</title>
+        <link href="../resources/highcharts.css" rel="stylesheet" type="text/css"/>
+        <script src="../resources/jquery-3.2.1.js" type="text/javascript"></script>
+
+        <script src="../resources/highcharts.js" type="text/javascript"></script>
+        <script src="../resources/data.js" type="text/javascript"></script>
+        <script src="../resources/drilldown.src.js" type="text/javascript"></script>
+        <script src="highchart.data.js" type="text/javascript"></script>
+    </head>
+    <body> 
+        <div id="chartContainer" style="min-width: 310px; height: 400px; margin: 0 auto;"></div>
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+                // clubs -> players -> qualify
+                function random(){
+                    return Math.floor(Math.random() * 100) + 1;
+                }
+                // series
+                var master = [
+                            {name: 'Passing',  data:[
+                                    {name:'Real Madrid',    y:88}, 
+                                    {name:'Barcelona',      y:66}, 
+                                    {name:'Alain',          y:56}]},
+                            {name: 'Shooting', data:[
+                                    {name:'Real Madrid',    y:23, drilldown: true}, 
+                                    {name:'Barcelona',      y:90, drilldown: true}, 
+                                    {name:'Alain',          y:45, drilldown: true}]},
+                            {name: 'Scoring',  data:[
+                                    {name:'Real Madrid',    y:77}, 
+                                    {name:'Barcelona',      y:89}, 
+                                    {name:'Alain',          y:34}]},
+                            {type: 'line', name: 'Scoring Rating',  data:[
+                                    {name:'Real Madrid',    y:77}, 
+                                    {name:'Barcelona',      y:89}, 
+                                    {name:'Alain',          y:34}]}
+                    ];
+                
+                // drilldowns
+                var detail = {
+                    'Real Madrid':  {
+                        'status' : [
+                            {name: 'Status', type:'pie', data: [
+                                    ['status 1', random()], 
+                                    ['status 2', random()], 
+                                    ['status 3', random()], 
+                                    ['status 4', random()] ]}
+                        ],
+                        'childs' : [
+                            {name: 'Speed',     type:'column', data: [
+                                    {name:'Ronaldo',    y: random()}, 
+                                    {name:'Husam',      y: random()}, 
+                                    {name:'Ramos',      y: random()}]},
+                            {name: 'Jumbing',   type:'column', data: [
+                                    {name:'Ronaldo',    y: random(), drilldown: true}, 
+                                    {name:'Husam',      y: random(), drilldown: true}, 
+                                    {name:'Ramos',      y: random(), drilldown: true}]},
+                            {name: 'Running',   type:'column', data: [
+                                    {name:'Ronaldo',    y: random()}, 
+                                    {name:'Husam',      y: random()}, 
+                                    {name:'Ramos',      y: random()}]},
+                            {name: 'Running Rate',   type:'line', data: [
+                                    {name:'Ronaldo',    y: random()}, 
+                                    {name:'Husam',      y: random()}, 
+                                    {name:'Ramos',      y: random()}]}
+                        ]
+                    }
+                };
+                
+//                $.get("http://localhost:8084/HighChartTest/GetDataFromServer", function(data){
+//                    var master = data.master;
+//                    var detail = data.detail;
+
+                    var tttest = {
+                                    master:[
+                                        {name:'Status Name 1', data:[]}, 
+                                        {name:'Status Name 2', data:[{name:'Real Madrid',y:55}]}, 
+                                        {name:'Status Name 3', data:[{name:'Real Madrid',y:55}]}, 
+                                        {name:'Status Name 4', data:[{name:'Real Madrid',y:55}]}], 
+                                    detail: null
+                                };
+
+
+                    new HighchartData(tttest.master, tttest.detail, 'chartContainer');
+//                });
+//                var detail = {
+//                    'Animals':  {name: 'Animals',data: [{name:"Caws", y: 33, drilldown:'Caws'},['Sheep', 3]]},
+//                    'Animals2': {name: 'Animals',data: [{name:"Caws", y: 22, drilldown:'Caws2'},['Sheep', 13]]},
+//                    'Caws':     {name:'Caws', data:[['Long', 11], ['Float', 22]]},
+//                    'Caws2':    {name:'Caws', data:[['Long', 55], ['Float', 33]]}
+//                };
+            });
+        </script>
+    </body>
+</html>

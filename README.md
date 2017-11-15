@@ -1,1 +1,4 @@
 # HugeHighchartsDrilldown
+drillupall
+
+colorByPoint: true

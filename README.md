@@ -1,3 +1,9 @@
+https://anseki.github.io/leader-line/
+http://rettica.com/evendar/docs/readme.html#examples
+http://rettica.com/calentim/docs/readme.html#
+
+
+
 // solve drillupall in one call
 drillupall
 
@@ -39,3 +45,5 @@ xAxis: {
     },
     tickLength: 0
 },
+
+this.chart.container.style.fontFamily = "Comic Sans MS";

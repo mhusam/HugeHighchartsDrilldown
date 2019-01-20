@@ -50,3 +50,5 @@ this.chart.container.style.fontFamily = "Comic Sans MS";
 
 
 https://mvnrepository.com/artifact/org.kohsuke.sorcerer/sorcerer-javac/0.11
+
+https://github.com/bozaro/example-annotation-processor/tree/master/example-modify/processor/src/main/java/ru/bozaro

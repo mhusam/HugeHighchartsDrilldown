@@ -52,3 +52,17 @@ this.chart.container.style.fontFamily = "Comic Sans MS";
 https://mvnrepository.com/artifact/org.kohsuke.sorcerer/sorcerer-javac/0.11
 
 https://github.com/bozaro/example-annotation-processor/tree/master/example-modify/processor/src/main/java/ru/bozaro
+
+
+
+
+https://github.com/google/code-prettify
+https://mvnrepository.com/artifact/org.projectlombok/lombok/1.18.6
+https://struts.apache.org/download.cgi#struts2520
+https://gasparesganga.com/labs/jquery-loading-overlay/
+https://www.cssscript.com/facebook-like-context-loader-pure-javascript-contextloader/
+https://www.jqueryscript.net/loading/Skeleton-Loading-Screen-jQuery-avnSkeleton.html
+https://github.com/enbifa/jquery.skeleton.loader
+https://jquery.com/
+https://getbootstrap.com/
+

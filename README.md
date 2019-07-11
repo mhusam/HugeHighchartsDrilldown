@@ -76,3 +76,7 @@ https://getbootstrap.com/
 https://www.oracle.com/webfolder/technetwork/tutorials/obe/java/async-servlet/async-servlets.html
 
 https://viralpatel.net/blogs/html5-server-sent-events-java-servlets-example/
+
+
+
+https://codepen.io/anon/pen/VJRbjR?editors=0010
